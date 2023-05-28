@@ -6,6 +6,8 @@ jobs:
     name: Unit Test
     runs-on: ubuntu-latest
     steps:
+      - name: add-path
+        run: echo "true" >> $ACTIONS_ALLOW_UNSECURE_COMMANDS
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Set Node.js 18.x
